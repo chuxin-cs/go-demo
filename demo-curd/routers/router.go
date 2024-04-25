@@ -1,14 +1,25 @@
 package routers
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/chuxin-cs/demo-curd/routers/api"
+	"github.com/gin-gonic/gin"
+)
 
 func InitRouter() *gin.Engine {
-	r := gin.Default()
+	r := gin.New()
 
-	r.GET("/hello", func(c *gin.Context) {
-		// 打印 “你好，世界”
-		c.String(200, "你好，世界")
-	})
+	// 用户相关
+	user := r.Group("/user")
+	{
+		//获取用户列表
+		user.GET("/list", api.GetUserList)
+		//新建用户
+		user.POST("/add", api.AddUser)
+		//更新用户
+		user.POST("/edit", api.EditUser)
+		//删除用户
+		user.POST("/delete", api.DeleteUser)
+	}
 
 	r.Run(":9000")
 
