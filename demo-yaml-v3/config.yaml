@@ -1,8 +1,0 @@
-hello:
-  name: 127.0.0.1
-  age: 3306
-
-redis:
-  host: 127.0.0.1
-  port: 6379
-  password: 123456
