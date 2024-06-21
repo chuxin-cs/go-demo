@@ -2,7 +2,7 @@
 
 <div align="center">
     <a href="https://golang.google.cn/dl/">
-        <img alt="SDK" src="https://img.shields.io/badge/golang-1.22.4-42b883"/>
+        <img alt="SDK" src="https://img.shields.io/badge/golang SDK-1.22.4-42b883"/>
     </a>
 </div>
 
