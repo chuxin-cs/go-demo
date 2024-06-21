@@ -1,4 +1,6 @@
-简体中文 | [English](./README.en.md)
+<h1 align="center">
+  <a href="https://github.com/chuxin-cs" target="_blank">Go Demo</a>
+</h1>
 
 <div align="center">
     <a href="https://golang.google.cn/dl/">
@@ -7,7 +9,7 @@
 </div>
 
 <p align="center">
-  <span>English | <a href="./README.md">中文</a></span>
+  <span>English | <a href="./README.zh-CN.md">中文</a></span>
 </p>
 
 ### 功能清单
