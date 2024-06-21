@@ -1,25 +1,16 @@
 简体中文 | [English](./README.en.md)
 
 <div align="center">
-    <img width="200" src="https://avatars.githubusercontent.com/u/26094157?s=48&v=4"/>
-    <h1> go-admin </h1>
-    <p>go + gin</p>
+    <a href="https://golang.google.cn/dl/">
+        <img alt="SDK" src="https://img.shields.io/badge/golang-1.22.4-42b883"/>
+    </a>
 </div>
 
----
+<p align="center">
+  <span>English | <a href="./README.md">中文</a></span>
+</p>
 
-## 🎉 特性
-
-- 💪 40+高质量接口API
-- 👏 良好的类型定义
-
-## 🌱Go master 分支
-
-```bash
-# 克隆项目
-git clone  https://github.com/chuxin-cs/go-admin.git
-# 进入项目
-cd go-admin
-# 安装依赖
-go mod tidy
-```
+### 功能清单
+| 功能名称  |  文档链接  | 功能描述 |
+| -------- | --------- |--------- |
+| [demo-hello-world](./demo-hello-world)  |  [yuque](https://www.yuque.com/chuxin-cs/demo/ukkwkpkf817hn3ac)    | Create a project based on go demo, just print "hello world" |
