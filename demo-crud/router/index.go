@@ -1,9 +1,13 @@
 package router
 
-import "github.com/gin-gonic/gin"
+import (
+	"fmt"
+	"github.com/gin-gonic/gin"
+)
 
 // Add 增
 func Add(c *gin.Context) {
+	fmt.Println(c)
 	c.String(200, "add")
 }
 
