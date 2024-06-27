@@ -2,6 +2,16 @@ package utils
 
 import "fmt"
 
-func add() {
+func Add() {
 	fmt.Println("add")
+
+	main()
+}
+
+func Main() {
+	main()
+}
+
+func main() {
+	fmt.Println("111")
 }
