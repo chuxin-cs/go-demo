@@ -1,7 +1,7 @@
 // 指明当前文件属于哪个包
 package main
 
-// 导入 fmt 包
+// 导入 fmt 包 go 内置包
 import (
 	util "demo-hello-world/utils"
 	utils "demo-hello-world/utils/a/b/c"
