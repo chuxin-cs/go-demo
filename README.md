@@ -15,7 +15,7 @@
 ### name list
 | name  |  document  | description |
 | -------- | --------- |--------- |
-| 第01期：Go 环境安装  |  [yuque](https://www.yuque.com/chuxin-cs/go-demo/mu0kurhb237g8so5)    | Go 环境安装 和 Goland 编辑器安装 |
+| 第01期：Go 环境安装  |  [语雀](https://www.yuque.com/chuxin-cs/go-demo/mu0kurhb237g8so5)    | Go 环境安装 和 Goland 编辑器安装 |
 | [第02期：创建 Go 项目]("./demo-env") |[语雀](https://www.yuque.com/chuxin-cs/go-demo/gcb4dqd6gbg1fqmx)   | 使用 GoLand 创建 Go 项目 |
 | [第03期：打印 hello-world]("./demo-hello-world") |[语雀](https://www.yuque.com/chuxin-cs/go-demo/tunc2v3wn112hrst)   | 使用 go 打印 hell world |
 | [第04期：demo-crud 实现增删改查]("./demo-curd") | [语雀](https://www.yuque.com/chuxin-cs/go-demo/shhqplu5eo95k2no)  | 于 go + gin 实现增删改查，仅仅只是提供接口不涉及数据库增删改查 |
