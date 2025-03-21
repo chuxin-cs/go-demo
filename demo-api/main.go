@@ -6,17 +6,15 @@ import (
 )
 
 func main() {
-	fmt.Println("demo api.......")
-
+	fmt.Println("==> 程序开始")
 	defer func() {
 		if err := recover(); err != nil {
 			log.Printf("程序回复:%v\n", err)
 		}
 	}()
-
-	fmt.Println("程序开始")
 	riskyOperation()
 	fmt.Println("我其实都不会走到这里来！！！")
+
 }
 
 func riskyOperation() {
