@@ -17,8 +17,7 @@ func InitRouter() *gin.Engine {
 		//更新用户
 		user.POST("/update", api.EditUser)
 		//删除用户
-		user.POST("/delete/:id", api.DeleteUser)
-		user.POST("/delete", api.DeleteAllUser)
+		user.POST("/delete", api.DeleteUser)
 	}
 	err := r.Run(":9000")
 	if err != nil {

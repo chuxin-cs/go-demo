@@ -27,9 +27,17 @@ func GetUserList(c *gin.Context) {
 	})
 }
 
+// AddUser http://localhost:9000/user/add
 func AddUser(c *gin.Context) {
 	name := c.PostForm("name")
-	c.JSON(200, "post x-www-form-urlencoded请求"+name)
+	defaultValue := c.DefaultPostForm("value", "我是value的默认值，只有当我没传时才会是当前值")
+	data := map[string]interface{}{
+		"name":  name,
+		"value": defaultValue,
+	}
+	c.JSON(200, gin.H{
+		"data": data,
+	})
 }
 
 type Person struct {
@@ -37,6 +45,7 @@ type Person struct {
 	Name string `json:"name" binding:"required"`
 }
 
+// EditUser http://localhost:9000/user/update
 func EditUser(c *gin.Context) {
 	var person Person
 	if err := c.ShouldBindJSON(&person); err != nil {
@@ -45,13 +54,17 @@ func EditUser(c *gin.Context) {
 		})
 		return
 	}
-	c.JSON(200, "post json格式请求")
+	c.JSON(200, gin.H{
+		"person": person,
+	})
 }
 
+// DeleteUser http://localhost:9000/user/delete?ids=1,2,3
 func DeleteUser(c *gin.Context) {
-	c.String(200, "删除用户")
-}
-
-func DeleteAllUser(c *gin.Context) {
-	c.String(200, "删除多个用户")
+	// 用 Query 或者 Param
+	idsStr := c.Query("ids")
+	c.JSON(200, gin.H{
+		"msg": "删除用户",
+		"ids": idsStr,
+	})
 }
