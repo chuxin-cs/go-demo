@@ -10,9 +10,8 @@ func InitRouter() *gin.Engine {
 	// 用户相关
 	user := r.Group("/user")
 	{
-		//获取用户列表
 		user.GET("/list/:id", api.GetUser)
-		user.GET("/query", api.GetUserQueryList)
+		user.GET("/list", api.GetUserList)
 		//新建用户
 		user.POST("/add", api.AddUser)
 		//更新用户

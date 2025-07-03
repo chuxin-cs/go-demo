@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-// http://localhost:9000/user/list/123
+// GetUser http://localhost:9000/user/list/123
 func GetUser(c *gin.Context) {
 	id := c.Param("id")
 	c.JSON(200, gin.H{
@@ -13,8 +13,8 @@ func GetUser(c *gin.Context) {
 	})
 }
 
-// 
-func GetUserQueryList(c *gin.Context) {
+// GetUserList http://localhost:9000/user/list?page=1&pageSize=2
+func GetUserList(c *gin.Context) {
 	// 取前端传的参数
 	page1 := c.Query("page")
 	pageSize1 := c.Query("pageSize")
@@ -22,8 +22,8 @@ func GetUserQueryList(c *gin.Context) {
 	page := c.DefaultQuery("page", "1")
 	pageSize := c.DefaultQuery("pageSize", "10")
 	c.JSON(200, gin.H{
-		"msg":  "如果不传那么默认的值：" + page + pageSize,
-		"msg1": "取前端传递的参数：" + page1 + pageSize1,
+		"msg":  "如果不传那么默认的值：" + page + "-" + pageSize,
+		"msg1": "取前端传递的参数：" + page1 + "-" + pageSize1,
 	})
 }
 
