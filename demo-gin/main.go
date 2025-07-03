@@ -3,10 +3,10 @@ package main
 
 // 导入 gin 包
 import (
-	"demo-gin/routers"
+	"demo-gin/core"
 )
 
 // 创建 main 方法
 func main() {
-	routers.InitRouter()
+	core.InitRouter()
 }

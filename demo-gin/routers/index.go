@@ -1,9 +1,13 @@
 package routers
 
-import "demo-gin/api"
-
-// 基于全局变量的特性
-var (
-	UserApi = api.GroupAppApi
-	DemoApi = api.GroupAppApi.DemoApi
+import (
+	"demo-gin/routers/example"
+	"demo-gin/routers/system"
 )
+
+var GroupRouterApp = new(GroupRouter)
+
+type GroupRouter struct {
+	System  system.GroupRouter
+	Example example.GroupRouter
+}
