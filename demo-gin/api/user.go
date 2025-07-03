@@ -5,21 +5,26 @@ import (
 	"net/http"
 )
 
-func GetUserList(c *gin.Context) {
-	// r.GET("/user/:id", func(){  }) 取前端传的参数
-	id := c.Query("id")
-
-	c.String(200, "get请求"+id)
+// http://localhost:9000/user/list/123
+func GetUser(c *gin.Context) {
+	id := c.Param("id")
+	c.JSON(200, gin.H{
+		"msg": "传参是" + id,
+	})
 }
 
+// 
 func GetUserQueryList(c *gin.Context) {
 	// 取前端传的参数
-	//page1 := c.Query("page")
-	//pageSize1 := c.Query("pageSize")
+	page1 := c.Query("page")
+	pageSize1 := c.Query("pageSize")
 	// 取前端传的参数，没有的情况下用默认值
 	page := c.DefaultQuery("page", "1")
 	pageSize := c.DefaultQuery("pageSize", "10")
-	c.String(200, "get请求"+page+pageSize)
+	c.JSON(200, gin.H{
+		"msg":  "如果不传那么默认的值：" + page + pageSize,
+		"msg1": "取前端传递的参数：" + page1 + pageSize1,
+	})
 }
 
 func AddUser(c *gin.Context) {
@@ -41,4 +46,12 @@ func EditUser(c *gin.Context) {
 		return
 	}
 	c.JSON(200, "post json格式请求")
+}
+
+func DeleteUser(c *gin.Context) {
+	c.String(200, "删除用户")
+}
+
+func DeleteAllUser(c *gin.Context) {
+	c.String(200, "删除多个用户")
 }

@@ -1,0 +1,29 @@
+package routers
+
+import (
+	"demo-gin/api"
+	"github.com/gin-gonic/gin"
+)
+
+func InitRouter() *gin.Engine {
+	r := gin.New()
+	// 用户相关
+	user := r.Group("/user")
+	{
+		//获取用户列表
+		user.GET("/list/:id", api.GetUser)
+		user.GET("/query", api.GetUserQueryList)
+		//新建用户
+		user.POST("/add", api.AddUser)
+		//更新用户
+		user.POST("/update", api.EditUser)
+		//删除用户
+		user.POST("/delete/:id", api.DeleteUser)
+		user.POST("/delete", api.DeleteAllUser)
+	}
+	err := r.Run(":9000")
+	if err != nil {
+		return nil
+	}
+	return r
+}
