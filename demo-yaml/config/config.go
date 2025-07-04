@@ -8,22 +8,22 @@ import (
 
 // Configs 整合所有的 struct
 type Configs struct {
-	Database Database `mapstructure:"database"`
-	Server   Server   `mapstructure:"server"`
+	Database Database `map structure:"database"`
+	Server   Server   `map structure:"server"`
 }
 
 // Database 数据库相关
 type Database struct {
-	Host     string `mapstructure:"host" json:"host" yaml:"host"`
-	Port     int    `mapstructure:"port" json:"port" yaml:"port"`
-	Name     string `mapstructure:"name" json:"name" yaml:"name"`
-	User     string `mapstructure:"user" json:"user" yaml:"user"`
-	Password string `mapstructure:"password" json:"password" yaml:"password"`
+	Host     string `map structure:"host" json:"host" yaml:"host"`
+	Port     int    `map structure:"port" json:"port" yaml:"port"`
+	Name     string `map structure:"name" json:"name" yaml:"name"`
+	User     string `map structure:"user" json:"user" yaml:"user"`
+	Password string `map structure:"password" json:"password" yaml:"password"`
 }
 
 // Server 服务相关
 type Server struct {
-	Port int `mapstructure:"port" yaml:"port" json:"port" `
+	Port int `map structure:"port" yaml:"port" json:"port" `
 }
 
 // GlobalConfig 定义全局变量
