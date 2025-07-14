@@ -1,10 +1,10 @@
 package main
 
-import core "demo-api/src"
+import "demo-api/demo"
 
 func main() {
-	core.Src21()
-	core.Src22()
+	demo.Demo21()
+	demo.Demo22()
 }
 
 //func main() {
